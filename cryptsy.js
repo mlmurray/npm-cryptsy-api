@@ -22,6 +22,7 @@ function CryptsyClient(key, secret) {
       uri: 'https://api.cryptsy.com/api',
       agent: false,
       method: 'POST',
+      timeout: 40000,
       headers: {
         "User-Agent": "Mozilla/4.0 (compatible; Cryptsy API node client)",
         "Content-type": "application/x-www-form-urlencoded"
