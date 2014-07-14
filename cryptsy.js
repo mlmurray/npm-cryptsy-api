@@ -77,6 +77,11 @@ function CryptsyClient(key, secret) {
                 log.info('Cryptsy API Error. Response error.');
                 throw new Error(response.error);
         }
+        var json;
+        else if(err || !res || res.statusCode !=200){
+            return callback(err || new Error("Request Failed"));
+        }
+        json = JSON.parse(body);
       }
     });
   }
