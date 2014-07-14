@@ -78,7 +78,7 @@ function CryptsyClient(key, secret) {
                 throw new Error(response.error);
         }
         var json;
-        else if(err || !res || res.statusCode !=200){
+        else if (err || !res || res.statusCode !=200){
             return callback(err || new Error("Request Failed"));
         }
         json = JSON.parse(body);
